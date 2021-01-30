@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfAppWithModules.Views.ShellWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:core="wp"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+       
+        Title="ShellWindow" Height="1126.165" Width="1674.352" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <TabControl x:Name="TbGestionDonaciones">
+            <TabItem x:Name="TbUsuarios" prism:RegionManager.RegionName="UsuarioRegion" Header="Gestión usuarios" Margin="0" FontSize="16" />
+            <TabItem x:Name="TbDonaciones" prism:RegionManager.RegionName="DonacionRegion"   Header="Gestión donaciones" Margin="0" FontSize="16"  />
+        </TabControl>
+    </Grid>
+</Window>

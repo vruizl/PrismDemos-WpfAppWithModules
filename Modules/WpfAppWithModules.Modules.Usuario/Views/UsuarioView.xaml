@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="WpfAppWithModules.Modules.Usuario.Views.UsuarioView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WpfAppWithModules.Modules.Usuario.Views"    
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d"
+            >
+    <StackPanel>
+        <TextBox x:Name="tbNombre" Text="{Binding Usuario.Nombre, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="200" Height="25" Margin="20,50,0,0"></TextBox>
+        <TextBox x:Name="tbTipoDemanda" Text="{Binding Usuario.TipoDemanda, UpdateSourceTrigger=PropertyChanged}" Width="150" Height="25" HorizontalAlignment="Left" Margin="20,50,0,0"></TextBox>
+        
+        <Button x:Name="btAddUsuario" Content="Añadir Usuario" HorizontalAlignment="Left" Command="{Binding AddUsuarioCommand}" VerticalAlignment="Center" RenderTransformOrigin="2.894,8.094" Margin="359,0,0,0"/>
+        <ListBox x:Name="lbUsuarios" ItemsSource="{Binding NombresUsuarios}" Height="100" Width="407" Margin="0,50,0,0"/>
+        
+        <DataGrid ItemsSource="{Binding Usuarios}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" />
+                <DataGridTextColumn Binding="{Binding TipoDemanda}" Header="Tipo demanda" />
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <TextBlock Text="{Binding Text}" HorizontalAlignment="Left" Margin="168,225,0,0" VerticalAlignment="Top" Height="73" Width="396" FontSize="20" FontWeight="Bold"/>
+    </StackPanel>
+</UserControl>

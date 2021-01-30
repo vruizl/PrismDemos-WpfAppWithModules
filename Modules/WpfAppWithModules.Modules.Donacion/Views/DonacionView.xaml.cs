@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfAppWithModules
+namespace WpfAppWithModules.Modules.Donacion.Views
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para DonacionView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DonacionView : UserControl
     {
-        public MainWindow()
+        public DonacionView()
         {
             InitializeComponent();
         }
