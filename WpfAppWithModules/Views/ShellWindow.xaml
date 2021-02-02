@@ -5,7 +5,7 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
        
-        Title="ShellWindow" Height="1126.165" Width="1674.352" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="ShellWindow" Height="648.479" Width="993.849" WindowStartupLocation="CenterScreen" >
     <Grid>
         <TabControl x:Name="TbGestionDonaciones">
             <TabItem x:Name="TbUsuarios" prism:RegionManager.RegionName="UsuarioRegion" Header="Gestión usuarios" Margin="0" FontSize="16" />

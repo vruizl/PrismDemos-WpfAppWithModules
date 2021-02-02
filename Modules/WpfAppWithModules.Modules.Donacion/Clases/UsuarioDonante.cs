@@ -10,21 +10,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Prism.Mvvm;
 
-namespace WpfAppWithModules.Modules.Usuario.Clases
+namespace WpfAppWithModules.Modules.Donacion.Clases
 {
-    public class UsuarioDonacion : BindableBase
+    public class UsuarioDonante : BindableBase
 
     {
-        //public enum TipoNecesidad  { Comida, Ropa, Productos_limpieza, Otros}; 
-        public UsuarioDonacion(string nombre, string tipoDemanda) 
+       
+        public UsuarioDonante(string nombre, string tipoDonacion)
         {
             _nombre = nombre;
-            _tipoDemanda = tipoDemanda;
+            _tipoDonacion = tipoDonacion;
         }
 
-        public UsuarioDonacion()
+        public UsuarioDonante()
         {
-            
+
         }
         private string _nombre;
         public string Nombre
@@ -36,19 +36,18 @@ namespace WpfAppWithModules.Modules.Usuario.Clases
             }
         }
 
-        private string _tipoDemanda;
-        public string TipoDemanda
+        private string _tipoDonacion;
+        public string TipoDonacion
         {
-            get { return _tipoDemanda; }
+            get { return _tipoDonacion; }
             set
             {
-                SetProperty(ref _tipoDemanda, value);
+                SetProperty(ref _tipoDonacion, value);
             }
         }
 
-       
 
-       
+
+
     }
 }
-

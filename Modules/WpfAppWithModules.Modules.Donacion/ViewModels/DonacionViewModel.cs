@@ -6,36 +6,36 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfAppWithModules.Modules.Usuario.Clases;
+using WpfAppWithModules.Modules.Donacion.Clases;
 
-namespace WpfAppWithModules.Modules.Usuario.ViewModels
+namespace WpfAppWithModules.Modules.Donacion.ViewModels
 {
-    public class UsuarioViewModel : BindableBase
+    public class DonacionViewModel : BindableBase
     {
-        private UsuarioDonacion _usuario = new UsuarioDonacion();
-        public UsuarioDonacion Usuario
+        private UsuarioDonante _usuario = new UsuarioDonante();
+        public UsuarioDonante Usuario
         {
             get { return _usuario; }
             //set { SetProperty(ref _usuario, value); }
         }
 
-        private readonly ObservableCollection<UsuarioDonacion> _usuarios = new ObservableCollection<UsuarioDonacion>();
+        private readonly ObservableCollection<UsuarioDonante> _usuarios = new ObservableCollection<UsuarioDonante>();
 
-        public ObservableCollection<UsuarioDonacion> Usuarios
+        public ObservableCollection<UsuarioDonante> Usuarios
         {
             get { return _usuarios; }
         }
 
         public DelegateCommand AddUsuarioCommand { get; set; }
 
-        public UsuarioViewModel()
+        public DonacionViewModel()
         {
             AddUsuarioCommand = new DelegateCommand(Click);
         }
 
         private void Click()
-        {      
-            _usuarios.Add(new UsuarioDonacion(Usuario.Nombre,Usuario.TipoDemanda));
+        {
+            _usuarios.Add(new UsuarioDonante(Usuario.Nombre, Usuario.TipoDonacion));
             //TODO:Limpiar valores textboxes
         }
 

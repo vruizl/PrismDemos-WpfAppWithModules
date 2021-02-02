@@ -8,20 +8,28 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d"
             >
-    <StackPanel>
-        <TextBox x:Name="tbNombre" Text="{Binding Usuario.Nombre, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="200" Height="25" Margin="20,50,0,0"></TextBox>
-        <TextBox x:Name="tbTipoDemanda" Text="{Binding Usuario.TipoDemanda, UpdateSourceTrigger=PropertyChanged}" Width="150" Height="25" HorizontalAlignment="Left" Margin="20,50,0,0"></TextBox>
-        
-        <Button x:Name="btAddUsuario" Content="Añadir Usuario" HorizontalAlignment="Left" Command="{Binding AddUsuarioCommand}" VerticalAlignment="Center" RenderTransformOrigin="2.894,8.094" Margin="359,0,0,0"/>
-        <ListBox x:Name="lbUsuarios" ItemsSource="{Binding NombresUsuarios}" Height="100" Width="407" Margin="0,50,0,0"/>
-        
-        <DataGrid ItemsSource="{Binding Usuarios}" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" />
-                <DataGridTextColumn Binding="{Binding TipoDemanda}" Header="Tipo demanda" />
-            </DataGrid.Columns>
-        </DataGrid>
-        
-        <TextBlock Text="{Binding Text}" HorizontalAlignment="Left" Margin="168,225,0,0" VerticalAlignment="Top" Height="73" Width="396" FontSize="20" FontWeight="Bold"/>
+    <StackPanel Height="384" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <GroupBox Header="Datos del usuario" Height="200" Width="328" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel Margin="0,0,0,-12.4" >
+                <TextBlock>Nombre:</TextBlock>
+                <TextBox x:Name="tbNombre" Text="{Binding Usuario.Nombre, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock/>
+                <TextBlock>Tipo de demanda:</TextBlock>
+                <TextBox x:Name="tbTipoDemanda" Text="{Binding Usuario.TipoDemanda, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock/>
+                <Button x:Name="btAddUsuario" Content="Añadir Usuario" Command="{Binding AddUsuarioCommand}" HorizontalAlignment="Right" />
+            </StackPanel> 
+        </GroupBox>
+        <TextBlock/>
+        <GroupBox Header="Listado de usuarios" Height="147" Width="328" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel>
+                <DataGrid ItemsSource="{Binding Usuarios}" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" />
+                        <DataGridTextColumn Binding="{Binding TipoDemanda}" Header="Tipo demanda" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </GroupBox>
     </StackPanel>
 </UserControl>
