@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppWithModules.Core", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppWithModules.Modules.Donacion", "Modules\WpfAppWithModules.Modules.Donacion\WpfAppWithModules.Modules.Donacion.csproj", "{9DE8658C-672F-4271-BE43-07F4B8CBA449}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{33F92C58-8354-434A-AC3E-D7A8FF1AAC85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppWithModules.Modules.Testing", "Tests\WpfAppWithModules.Modules.Testing\WpfAppWithModules.Modules.Testing.csproj", "{E6A9C7DB-8B6C-4515-AE00-C2D381FB76AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{9DE8658C-672F-4271-BE43-07F4B8CBA449}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DE8658C-672F-4271-BE43-07F4B8CBA449}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DE8658C-672F-4271-BE43-07F4B8CBA449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A9C7DB-8B6C-4515-AE00-C2D381FB76AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A9C7DB-8B6C-4515-AE00-C2D381FB76AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A9C7DB-8B6C-4515-AE00-C2D381FB76AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A9C7DB-8B6C-4515-AE00-C2D381FB76AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +50,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3D42DF19-292F-445B-9B2A-C38F39BF68C6} = {E194490B-E04B-4F71-AADC-D525D0D1AD06}
 		{9DE8658C-672F-4271-BE43-07F4B8CBA449} = {E194490B-E04B-4F71-AADC-D525D0D1AD06}
+		{E6A9C7DB-8B6C-4515-AE00-C2D381FB76AA} = {33F92C58-8354-434A-AC3E-D7A8FF1AAC85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {521AA9BC-0485-48B1-8358-999EB90EC77E}
