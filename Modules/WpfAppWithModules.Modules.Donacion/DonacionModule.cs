@@ -8,6 +8,8 @@ using Prism.Ioc;
 using Prism.Regions;
 using WpfAppWithModules.Core;
 using WpfAppWithModules.Modules.Donacion.Views;
+using WpfAppWithModules.Services.Interfaces;
+using WpfAppWithModules.Services;
 
 namespace WpfAppWithModules.Modules.Donacion
 {
@@ -21,9 +23,11 @@ namespace WpfAppWithModules.Modules.Donacion
         public void OnInitialized(IContainerProvider containerprovider)
         {
             _regionManager.RegisterViewWithRegion(RegionNames.DonacionRegion, typeof(DonacionView));
+            _regionManager.RegisterViewWithRegion(RegionNames.DonacionListRegion, typeof(DonacionListView));
         }
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<IUsuarioDonanteService, UsuarioDonanteService>();
         }
     }
 }

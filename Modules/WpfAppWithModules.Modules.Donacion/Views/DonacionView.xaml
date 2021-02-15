@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:WpfAppWithModules.Modules.Donacion.Views"    
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
-             mc:Ignorable="d"
+             mc:Ignorable="d" Height="238.4" Width="400.8"
             >
-    <StackPanel Height="384" HorizontalAlignment="Left" VerticalAlignment="Top">
-        <GroupBox Header="Datos de la persona que dona" Height="200" Width="328" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <StackPanel Height="238" HorizontalAlignment="Left" VerticalAlignment="Top" Width="391">
+        <GroupBox Header="Datos de la persona que dona" Height="233" Width="381" HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel Margin="0,0,0,-12.4" >
                 <TextBlock>Nombre:</TextBlock>
                 <TextBox x:Name="tbNombre" Text="{Binding Usuario.Nombre, UpdateSourceTrigger=PropertyChanged}"/>
@@ -18,18 +18,10 @@
                 <TextBox x:Name="tbTipoDonacion" Text="{Binding Usuario.TipoDonacion, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock/>
                 <Button x:Name="btAddDonate" Content="Añadir" Command="{Binding AddUsuarioCommand}" HorizontalAlignment="Right" />
+                <TextBlock Text="{Binding Text}"/>
             </StackPanel>
         </GroupBox>
       
-        <GroupBox Header="Listado de donaciones" Height="147" Width="328" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <StackPanel>
-                <DataGrid ItemsSource="{Binding Usuarios}" AutoGenerateColumns="False">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" />
-                        <DataGridTextColumn Binding="{Binding TipoDonacion}" Header="Tipo donación" />
-                    </DataGrid.Columns>
-                </DataGrid>
-            </StackPanel>
-        </GroupBox>
+      
     </StackPanel>
 </UserControl>

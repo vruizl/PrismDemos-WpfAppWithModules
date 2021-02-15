@@ -74,9 +74,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\UsuarioDonacion.cs" />
     <Compile Include="UsuarioModule.cs" />
+    <Compile Include="ViewModels\UsuarioListViewModel.cs" />
     <Compile Include="ViewModels\UsuarioViewModel.cs" />
+    <Compile Include="Views\UsuarioListView.xaml.cs">
+      <DependentUpon>UsuarioListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UsuarioView.xaml.cs">
       <DependentUpon>UsuarioView.xaml</DependentUpon>
     </Compile>
@@ -105,14 +108,32 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="Clases\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WpfAppWithModules.Business\WpfAppWithModules.Business.csproj">
+      <Project>{f2ea3ef8-34a5-439b-b96e-33b74460bad2}</Project>
+      <Name>WpfAppWithModules.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\WpfAppWithModules.Core\WpfAppWithModules.Core.csproj">
       <Project>{9b6f1c94-6157-4b1b-b33d-b94227f538ed}</Project>
       <Name>WpfAppWithModules.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\WpfAppWithModules.Services.Interfaces\WpfAppWithModules.Services.Interfaces.csproj">
+      <Project>{5a86532e-aefe-47a0-852d-257122f35f92}</Project>
+      <Name>WpfAppWithModules.Services.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WpfAppWithModules.Services\WpfAppWithModules.Services.csproj">
+      <Project>{b86c186d-0854-471e-a8cb-c2002d27d16f}</Project>
+      <Name>WpfAppWithModules.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\UsuarioListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UsuarioView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

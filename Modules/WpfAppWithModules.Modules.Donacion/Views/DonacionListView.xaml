@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="WpfAppWithModules.Modules.Donacion.Views.DonacionListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppWithModules.Modules.Donacion.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             Height="272.986" Width="622.986">
+    <StackPanel Margin="0,0,10.2,24.8">
+        <GroupBox Header="Listado de donaciones" Height="232" Width="602" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.492,0.746">
+            <StackPanel RenderTransformOrigin="0.492,0.749">
+                <DataGrid ItemsSource="{Binding Usuarios}" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" />
+                        <DataGridTextColumn Binding="{Binding TipoDonacion}" Header="Tipo donación" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</UserControl>

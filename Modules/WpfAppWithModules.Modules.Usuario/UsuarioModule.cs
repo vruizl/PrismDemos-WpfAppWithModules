@@ -8,6 +8,8 @@ using Prism.Modularity;
 using Prism.Regions;
 using WpfAppWithModules.Core;
 using WpfAppWithModules.Modules.Usuario.Views;
+using WpfAppWithModules.Services;
+using WpfAppWithModules.Services.Interfaces;
 
 namespace WpfAppWithModules.Modules.Usuario
 {
@@ -20,12 +22,13 @@ namespace WpfAppWithModules.Modules.Usuario
         }
         public void OnInitialized(IContainerProvider containerprovider)
         {
-            //_regionManager.RegisterViewWithRegion(RegionNames.UsuarioListRegion, typeof(UsuarioListView));
+            _regionManager.RegisterViewWithRegion(RegionNames.UsuarioListRegion, typeof(UsuarioListView));
             _regionManager.RegisterViewWithRegion(RegionNames.UsuarioRegion, typeof(UsuarioView));
 
         }
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<IUsuarioDonacionService, UsuarioDonacionService>();
         }
     }
 }

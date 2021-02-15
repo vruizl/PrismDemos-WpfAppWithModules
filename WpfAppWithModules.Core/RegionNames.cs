@@ -10,6 +10,8 @@ namespace WpfAppWithModules.Core
     public static class RegionNames
     {
         public static string UsuarioRegion = "UsuarioRegion";
+        public static string UsuarioListRegion = "UsuarioListRegion";
         public static string DonacionRegion = "DonacionRegion";
+        public static string DonacionListRegion = "DonacionListRegion";
     }
 }

@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:WpfAppWithModules.Modules.Usuario.Views"    
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
-             mc:Ignorable="d"
+             mc:Ignorable="d" Width="400.8"
             >
-    <StackPanel Height="384" HorizontalAlignment="Left" VerticalAlignment="Top">
-        <GroupBox Header="Datos del usuario" Height="200" Width="328" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <StackPanel Margin="0,0,0,-12.4" >
+    <StackPanel Height="238" HorizontalAlignment="Left" VerticalAlignment="Top" Width="391">
+        <GroupBox Header="Datos del usuario" Height="233" Width="381" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel Margin="0,0,0,-1.6" >
                 <TextBlock>Nombre:</TextBlock>
                 <TextBox x:Name="tbNombre" Text="{Binding Usuario.Nombre, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock/>
@@ -18,18 +18,10 @@
                 <TextBox x:Name="tbTipoDemanda" Text="{Binding Usuario.TipoDemanda, UpdateSourceTrigger=PropertyChanged}" />
                 <TextBlock/>
                 <Button x:Name="btAddUsuario" Content="Añadir Usuario" Command="{Binding AddUsuarioCommand}" HorizontalAlignment="Right" />
+                <TextBlock Text="{Binding Text}"/>
             </StackPanel> 
         </GroupBox>
         <TextBlock/>
-        <GroupBox Header="Listado de usuarios" Height="147" Width="328" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <StackPanel>
-                <DataGrid ItemsSource="{Binding Usuarios}" AutoGenerateColumns="False">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" />
-                        <DataGridTextColumn Binding="{Binding TipoDemanda}" Header="Tipo demanda" />
-                    </DataGrid.Columns>
-                </DataGrid>
-            </StackPanel>
-        </GroupBox>
+      
     </StackPanel>
 </UserControl>

@@ -8,8 +8,20 @@
         Title="ShellWindow" Height="648.479" Width="993.849" WindowStartupLocation="CenterScreen" >
     <Grid>
         <TabControl x:Name="TbGestionDonaciones">
-            <TabItem x:Name="TbUsuarios" prism:RegionManager.RegionName="UsuarioRegion" Header="Gestión usuarios" Margin="0" FontSize="16" />
-            <TabItem x:Name="TbDonaciones" prism:RegionManager.RegionName="DonacionRegion"   Header="Gestión donaciones" Margin="0" FontSize="16"  />
+            <TabItem x:Name="TbUsuarios"  Header="Gestión de altas" Margin="0" FontSize="16" >
+                <StackPanel x:Name="StAltas">
+                    <ContentControl prism:RegionManager.RegionName="UsuarioRegion"/>
+                    <TextBlock/>
+                    <TextBlock/>
+                    <ContentControl prism:RegionManager.RegionName="DonacionRegion"/>
+                </StackPanel >
+            </TabItem>
+            <TabItem x:Name="TbDonaciones" Header="Asignaciones" Margin="0" FontSize="16"  >
+            <StackPanel x:Name="StUsuarios">
+                    <ContentControl prism:RegionManager.RegionName="UsuarioListRegion"/>
+                    <ContentControl prism:RegionManager.RegionName="DonacionListRegion"/>
+                </StackPanel >
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
